@@ -1,0 +1,127 @@
+.thumbnail{
+    width: 100%;
+    /*
+    width: 300px;
+    when we set the width, the height also automatically changes so that the shape of
+    the image doesn't change... if we put value for height as well, then the shape changes */
+    
+    /*
+    height: 300px;   
+    object-fit: cover; ....it cuts the image
+    object-position: left; /right
+    
+    height: 300px;
+    object-fit: contain; ....it fits in it but a blank border is there
+    object-position: top; /bottom
+    */
+}
+/*
+ ......can use same for two classes with comma 
+.video-author,
+.video-stats{
+    display: inline-block;
+}
+*/
+
+.video-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 40px;
+    /*text-decoration: underline;
+    this is known as inheritance
+    this property is passed down to the elements present inside the video-grid
+    this happens usually only works on text-based-property... like, border wouldn't be passed */
+}
+
+/*these are 'media queries' Here, we are changing some features depending on the size of the screen*/
+@media (max-width: 750px) {
+    .video-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 751px) and (max-width: 999px) {
+    .video-grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1000px) {
+    .video-grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+
+/*
+.video-preview{
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 15px;
+     due to this, the block elements fill up the container/box rather than the whole page 
+} */
+
+/*
+.channel-picture{
+    display: inline-block;
+    width: 50px;
+    vertical-align: top;
+}
+
+.video-info{
+    display: inline-block;
+    width: 200px;
+}
+*/
+
+.video-info-grid{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+
+.profile-picture{
+    width: 36px;
+    /* better way so that the picture fills its space and doesn't overflow */
+    border-radius: 40px;
+    
+}
+
+.video-title{
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.thumbnail-row{
+    margin-bottom: 8px;
+    position: relative;
+}
+
+
+.video-author, .video-stats{
+    font-size: 12px;
+    color: rgb(96, 96, 96);    
+}
+
+.video-author{
+    margin-bottom: 4px;
+}
+
+.video-time{
+    position: absolute;
+    color: white;
+    background-color: black;
+    padding: 4px;
+    bottom: 8px;
+    right: 5px;
+    font-size: 12px;
+    font-weight: 500;  /*500 is semi bold*/
+    border-radius: 2px;
+}
+
+
+
+
